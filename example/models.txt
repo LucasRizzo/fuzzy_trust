@@ -1,0 +1,12 @@
+FL1-2,Zadeh,no,Linear
+FL3-4,Product,no,Linear
+FL5-6,Lukasiewicz,no,Linear
+FL7-8,Zadeh,yes,Linear
+FL9-10,Product,yes,Linear
+FL11-12,Lukasiewicz,yes,Linear
+FC1-2,Zadeh,no,Gaussian
+FC3-4,Product,no,Gaussian
+FC5-6,Lukasiewicz,no,Gaussian
+FC7-8,Zadeh,yes,Gaussian
+FC9-10,Product,yes,Gaussian
+FC11-12,Lukasiewicz,yes,Gaussian

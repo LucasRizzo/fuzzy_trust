@@ -1,0 +1,21 @@
+trust
+trust.low
+rightNormal
+0,0.075
+
+trust
+trust.medium.low
+normal
+0.375,0.075
+
+trust
+trust.medium.high
+normal
+0.625,0.075
+
+trust
+trust.high
+leftNormal
+1,0.075
+two lines
+at the end

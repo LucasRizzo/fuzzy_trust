@@ -1,0 +1,21 @@
+trust
+trust.low
+line
+0,1,0.3,0
+
+trust
+trust.medium.low
+triangle
+0.2,0,0.55,0
+
+trust
+trust.medium.high
+triangle
+0.45,0,0.80,0
+
+trust
+trust.high
+line
+0.70,0,1,1
+two lines
+at the end

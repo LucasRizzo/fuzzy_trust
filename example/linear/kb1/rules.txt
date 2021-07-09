@@ -1,0 +1,94 @@
+Bytes-MH, bytes %is% bytes.medium.high, trust %is% trust.medium.high
+Bytes-H, bytes %is% bytes.high, trust %is% trus.high
+AF-MH, activityFactor %is% activityFactor.medium.high, trust $is% trust.medium.high
+AF-H, activityFactor %is% activityFactor.high, trust %is% trust.high
+AF-L, activityFactor %is% activityFactor.low, trust %is% trust.low
+Ano-N, anonymous %is% anonymous.no, trust %is% trust.high
+Ano-Y, anonymous %is% anonymous.yes, trust %is% trust.low
+U1, absUnique %is% absUnique.low, trust %is% trust.low
+U2, absUnique %is% absUnique.medium.high, trust %is% trust.medium.high
+U3, absUnique %is% absUnique.high, trust %is% trust.high
+Com-L, comments %is% comments.low, trust %is% trust.low
+Com-ML, comments %is% comments.medium.low, trust %is% trust.medium.low
+Com-MH, comments %is% comments.medium.high, trust %is% trust.medium.high
+Com-H, comments %is% comments.high, trust %is% trust.high
+PF-L, presenceFactor %is% presenceFactor.low, trust %is% trust.low
+PF-ML, presenceFactor %is% presenceFactor.medium.low, trust %is% trust.medium.low
+PF-MH, presenceFactor %is% presenceFactor.medium.high, trust %is% trust.medium.high
+PF-H, presenceFactor %is% presenceFactor.high, trust %is% trust.high
+FF-L, frequencyFactor %is% frequencyFactor.low, trust %is% trust.low
+FF-ML, frequencyFactor %is% frequencyFactor.medium.low, trust %is% trust.medium.low
+FF-MH, frequencyFactor %is% frequencyFactor.medium.high, trust %is% trust.medium.high
+FF-H, frequencyFactor %is% frequencyFactor.high, trust %is% trust.high
+RF-L, regularityFactor %is% regularityFactor.low, trust %is% trust.low
+RF-ML, regularityFactor %is% regularityFactor.medium.low, trust %is% trust.medium.low
+RF-MH, regularityFactor %is% regularityFactor.medium.high, trust %is% trust.medium.high
+RF-H, regularityFactor %is% regularityFactor.high, trust %is% trust.high
+NotM-VL, notMinor %is% notMinor.very.low, trust %is% low
+NotM-H, notMinor %is% notMinor.medium.to.high, trust %is% trust.high
+NotM-VL => Bytes-MH
+NotM-VL => Bytes-H
+notMinor:notMinor.not.medium.to.high && frequencyFactor:frequencyFactor.low && frequencyFactor:frequencyFactor.low && activityFactor:activityFactor.low => PF-H
+notMinor:notMinor.not.medium.to.high && frequencyFactor:frequencyFactor.low && frequencyFactor:frequencyFactor.low && activityFactor:activityFactor.low => PF-MH
+notMinor:notMinor.not.medium.to.high && frequencyFactor:frequencyFactor.low && frequencyFactor:frequencyFactor.low && activityFactor:activityFactor.low => PF-ML
+PF-L => RF-H
+AF-L => RF-H
+AF-L => FF-H
+RF-L => PF-H
+FF-L => PF-H
+NotM-VL => AF-MH
+NotM-VL => AF-H
+NotM-H => U1
+NotM-H => Com-L
+NotM-H => PF-L
+anonymous:anonymous.yes => U3
+anonymous:anonymous.yes => U2
+anonymous:anonymous.yes => Com-MH
+anonymous:anonymous.yes => Com-H
+anonymous:anonymous.yes => AF-MH
+anonymous:anonymous.yes => AF-H
+anonymous:anonymous.yes => RF-H
+anonymous:anonymous.yes => FF-H
+anonymous:anonymous.yes => FF-MH
+anonymous:anonymous.yes => RF-MH
+anonymous:anonymous.yes => PF-MH
+anonymous:anonymous.yes => PF-H
+anonymous:anonymous.yes => Bytes-H
+anonymous:anonymous.yes => Bytes-MH
+anonymous:anonymous.yes => NotM-H
+presenceFactor:presenceFactor.low && regularityFactor:regularityFactor.low && comments:comments.low && uniquePages:uniquePages.low => AF-MH
+presenceFactor:presenceFactor.medium.low && regularityFactor:regularityFactor.low && comments:comments.low && uniquePages:uniquePages.low => AF-MH
+presenceFactor:presenceFactor.low && regularityFactor:regularityFactor.low && comments:comments.low && uniquePages:uniquePages.low => AF-H
+presenceFactor:presenceFactor.medium.low && regularityFactor:regularityFactor.low && comments:comments.low && uniquePages:uniquePages.low => AF-H
+presenceFactor:presenceFactor.low && regularityFactor:regularityFactor.low && comments:comments.low && uniquePages:uniquePages.low => Bytes-MH
+presenceFactor:presenceFactor.medium.low && regularityFactor:regularityFactor.low && comments:comments.low && uniquePages:uniquePages.low => Bytes-MH
+presenceFactor:presenceFactor.low && regularityFactor:regularityFactor.low && comments:comments.low && uniquePages:uniquePages.low => Bytes-H
+presenceFactor:presenceFactor.medium.low && regularityFactor:regularityFactor.low && comments:comments.low && uniquePages:uniquePages.low => Bytes-H
+anonymous:anonymous.yes && comments:comments.low && bytes:bytes.medium.high && notMinor:notMinor.very.low && uniquePages:uniquePages.medium.high => U3
+anonymous:anonymous.yes && comments:comments.low && bytes:bytes.medium.high && notMinor:notMinor.very.low && uniquePages:uniquePages.high => U3
+anonymous:anonymous.yes && comments:comments.low && bytes:bytes.high && notMinor:notMinor.very.low && uniquePages:uniquePages.medium.high => U3
+anonymous:anonymous.yes && comments:comments.low && bytes:bytes.high && notMinor:notMinor.very.low && uniquePages:uniquePages.high => U3
+anonymous:anonymous.yes && comments:comments.low && bytes:bytes.medium.high && notMinor:notMinor.very.low && uniquePages:uniquePages.medium.high => U2
+anonymous:anonymous.yes && comments:comments.low && bytes:bytes.medium.high && notMinor:notMinor.very.low && uniquePages:uniquePages.high => U2
+anonymous:anonymous.yes && comments:comments.low && bytes:bytes.high && notMinor:notMinor.very.low && uniquePages:uniquePages.medium.high => U2
+anonymous:anonymous.yes && comments:comments.low && bytes:bytes.high && notMinor:notMinor.very.low && uniquePages:uniquePages.high => U2
+anonymous:anonymous.yes && comments:comments.low && bytes:bytes.medium.high && notMinor:notMinor.very.low && uniquePages:uniquePages.medium.high => Com-L
+anonymous:anonymous.yes && comments:comments.low && bytes:bytes.medium.high && notMinor:notMinor.very.low && uniquePages:uniquePages.high => Com-L
+anonymous:anonymous.yes && comments:comments.low && bytes:bytes.high && notMinor:notMinor.very.low && uniquePages:uniquePages.medium.high => Com-L
+anonymous:anonymous.yes && comments:comments.low && bytes:bytes.high && notMinor:notMinor.very.low && uniquePages:uniquePages.high => Com-L
+anonymous:anonymous.yes && comments:comments.low && bytes:bytes.medium.high && notMinor:notMinor.very.low && uniquePages:uniquePages.medium.high => Bytes-H
+anonymous:anonymous.yes && comments:comments.low && bytes:bytes.medium.high && notMinor:notMinor.very.low && uniquePages:uniquePages.high => Bytes-H
+anonymous:anonymous.yes && comments:comments.low && bytes:bytes.high && notMinor:notMinor.very.low && uniquePages:uniquePages.medium.high => Bytes-H
+anonymous:anonymous.yes && comments:comments.low && bytes:bytes.high && notMinor:notMinor.very.low && uniquePages:uniquePages.high => Bytes-H
+anonymous:anonymous.yes && comments:comments.low && bytes:bytes.medium.high && notMinor:notMinor.very.low && uniquePages:uniquePages.medium.high => Bytes-MH
+anonymous:anonymous.yes && comments:comments.low && bytes:bytes.medium.high && notMinor:notMinor.very.low && uniquePages:uniquePages.high => Bytes-MH
+anonymous:anonymous.yes && comments:comments.low && bytes:bytes.high && notMinor:notMinor.very.low && uniquePages:uniquePages.medium.high => Bytes-MH
+anonymous:anonymous.yes && comments:comments.low && bytes:bytes.high && notMinor:notMinor.very.low && uniquePages:uniquePages.high => Bytes-MH
+anonymous:anonymous.yes && comments:comments.low && bytes:bytes.medium.high && notMinor:notMinor.very.low && uniquePages:uniquePages.medium.high => AF-MH
+anonymous:anonymous.yes && comments:comments.low && bytes:bytes.medium.high && notMinor:notMinor.very.low && uniquePages:uniquePages.high => AF-MH
+anonymous:anonymous.yes && comments:comments.low && bytes:bytes.high && notMinor:notMinor.very.low && uniquePages:uniquePages.medium.high => AF-MH
+anonymous:anonymous.yes && comments:comments.low && bytes:bytes.high && notMinor:notMinor.very.low && uniquePages:uniquePages.high => AF-MH
+anonymous:anonymous.yes && comments:comments.low && bytes:bytes.medium.high && notMinor:notMinor.very.low && uniquePages:uniquePages.medium.high => AF-H
+anonymous:anonymous.yes && comments:comments.low && bytes:bytes.medium.high && notMinor:notMinor.very.low && uniquePages:uniquePages.high => AF-H
+anonymous:anonymous.yes && comments:comments.low && bytes:bytes.high && notMinor:notMinor.very.low && uniquePages:uniquePages.medium.high => AF-H
+anonymous:anonymous.yes && comments:comments.low && bytes:bytes.high && notMinor:notMinor.very.low && uniquePages:uniquePages.high => AF-H
