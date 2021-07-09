@@ -4,7 +4,7 @@ Custom implementation of fuzzy reasoning models, employing a Mandani fuzzy infer
 
 #### Fuzzy membership functions of rule's variables
 
-The following shapes have been defined: triangle, two lines, line, normal, right normal (normal without left part), and left normal (normal without the right part).
+The following shapes have been defined: triangle, two lines, line, normal, right normal (normal without left part), and left normal (normal without the right part). Normal shapes are implemented with 1000 points. More points can be added but this can add considerably the execution time during the defuzzification stage.
 Text documents are available to exemplify the use of such shapes.
 
 #### T-norms and T-Conorms
@@ -25,7 +25,7 @@ Two methods have been implemented for defuzzification: centroid and mean of max.
 
 ## How to use
 
-Three text files are required:
+The following files are required:
 
 ##### A parameters file
 An example can be seen in the ```parameters.txt``` file. This will be used to define the membership function of fuzzy variables levels that can be employed by fuzzy rules.
