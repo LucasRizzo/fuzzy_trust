@@ -1,6 +1,6 @@
 ## Non-monotonic fuzzy reasoning implementation
 
-Custom implementation of fuzzy reasoning models, employing a Mandani fuzzy inference process [[1]](#1), and a non-monotonic layer through Possibility Theory [[2]](#2) for resolving contractions. While there are other better developed and documented fuzzy packages, such as FuzzyR in the R language, no other implementation with a non-monotonic layer was previously found to the creation of this repository. The example provided related to an application of computational trust, but this implementation has been used in many other publications also focused on different applications [[3]](#3),[[4]](#4),[[5]](#5),[[6]](#6).
+Custom implementation of fuzzy reasoning models, employing a Mandani fuzzy inference process [[1]](#1), and a non-monotonic layer through Possibility Theory [[2]](#2) for resolving contractions. While there are other better developed and documented fuzzy packages, such as FuzzyR in the R language, no other implementation with a non-monotonic layer was previously found till the creation of this repository. The example provided related to an application of computational trust, but this implementation has been used in many other publications also focused on different applications [[3]](#3),[[4]](#4),[[5]](#5),[[6]](#6).
 
 #### Fuzzy membership functions of rule's variables
 
@@ -64,12 +64,12 @@ This configuration will return two results: one with the centroid and one with t
 3. Weights: Yes or No for rule weights.
 4. Type: This parameters allows the separation of models in different folders. In the example there was one folder for models using linear membership functions, and another for models using gaussian membership functions. It allows the execution of models with the same configuration, but different rules, parameters, and consequent files.
 
-### Contact
+## Contact
 
 Contact me at lucasmrizzo@gmail.com
 
 
-### References
+## References
 <a id="1">[1]</a> 
 E. H. Mamdani, Application of fuzzy algorithms for control of simple
 dynamic plant, Proceedings of the Institution of Electrical Engineers 121
