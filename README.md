@@ -51,6 +51,19 @@ health:health.low => R1
 ```
 ```health.low``` needs to be defined in the parameters file. The logical AND operator ```&&``` can also be used here to add more than one premisse.
 
+##### A dataset file
+A csv file whose headers match the name of the variables. Each row will be an instance to be tested by the fuzzy reasoning model. Weights for features can be defined using the syntax ```Weight_<fuzzy_variable>```. The file ```portuguese.csv``` gives an example. Headers that don't match any fuzzy variable will be ignored. 
+
+##### A models file
+A models file is defined in order to facilitate the execution of models with different configurations. An example can be seen in the file ```models.txt```.
+Each line in the file follows the syntax:
+```Model_Names,Fuzzy_logic,Weights,Type```
+This configuration will return two results: one with the centroid and one with the mean max defuzzification approach (this could be easily changed in the code)
+1. Model_names: name of the models and file in which results will be exported.
+2. Fuzzy_logic: Zadeh, Lukasiewicz or Product
+3. Weights: Yes or No for rule weights.
+4. Type: This parameters allows the separation of models in different folders. In the example there was one folder for models using linear membership functions, and another for models using gaussian membership functions. It allows the execution of models with the same configuration, but different rules, parameters, and consequent files.
+
 ### References
 <a id="1">[1]</a> 
 E. H. Mamdani, Application of fuzzy algorithms for control of simple
