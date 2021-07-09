@@ -1,6 +1,6 @@
 ## Non-monotonic fuzzy reasoning implementation
 
-Custom implementation of fuzzy reasoning models, employing a Mandani fuzzy inference process [[1]](#1), and a non-monotonic layer through Possibility Theory [[2]](#2) for resolving contractions. While there are other better developed and documented fuzzy packages, such as FuzzyR in the R language, no other implementation with a non-monotonic layer was previously found till the creation of this repository. The example provided related to an application of computational trust, but this implementation has been used in many other publications also focused on different applications [[3]](#3),[[4]](#4),[[5]](#5),[[6]](#6).
+Custom implementation of fuzzy reasoning models, employing a Mandani fuzzy inference process [[1]](#1), and a non-monotonic layer through Possibility Theory [[2]](#2) for resolving contractions. While there are other better developed and documented fuzzy packages, such as FuzzyR in the R language, no other implementation with a non-monotonic layer was previously found till the creation of this repository. The example provided is related to an application of computational trust, but this implementation has been used in many other publications also focused on different applications [[3]](#3),[[4]](#4),[[5]](#5),[[6]](#6).
 
 #### Fuzzy membership functions of rule's variables
 
@@ -36,20 +36,20 @@ An example can be seen in the ```rules.txt``` file. This will be used to define 
 ```
 R1, age %is% age.high, risk %is% risk.high
 ```
-This examples defined a rule R1, in which the fuzzy variable ```age``` infers ```risk``` at level ```risk.high``` if ```age``` is level ```age.high```. ```age.high``` and ```risk.high``` need to be defined in the parameters file. A logical AND operator is implemented to add more than one fuzzy variable in the premisses with the double and syntax: ```&&```.
+This examples defined a rule R1, in which the fuzzy variable ```age``` infers ```risk``` at level ```risk.high``` if ```age``` is level ```age.high```. ```age.high``` and ```risk.high``` need to be defined in the parameters file. A logical AND operator is implemented to add more than one fuzzy variable in the premises with the double and syntax: ```&&```.
 Two rules can contradict each other with the following notation:
 ```
 R1 => R2
 ```
-This implied that if R1 is true than R2 is being contracted and needs to be reavaluated. A mutual contradiction can also be defined as:
+This implies that if R1 is true then R2 is being contracted and needs to be reevaluated. A mutual contradiction can also be defined as:
 ```
 R1 <=> R2
 ```
-Lastly, a set of premisses can also contradict a rule with the following notation:
+Lastly, a set of premises can also contradict a rule with the following notation:
 ```
 health:health.low => R1
 ```
-```health.low``` needs to be defined in the parameters file. The logical AND operator ```&&``` can also be used here to add more than one premisse.
+```health.low``` needs to be defined in the parameters file. The logical AND operator ```&&``` can also be used here to add more than one premise.
 
 ##### A dataset file
 A csv file whose headers match the name of the variables. Each row will be an instance to be tested by the fuzzy reasoning model. Weights for features can be defined using the syntax ```Weight_<fuzzy_variable>```. The file ```portuguese.csv``` gives an example. Headers that don't match any fuzzy variable will be ignored. 
@@ -62,7 +62,7 @@ This configuration will return two results: one with the centroid and one with t
 1. Model_names: name of the models and file in which results will be exported.
 2. Fuzzy_logic: Zadeh, Lukasiewicz or Product
 3. Weights: Yes or No for rule weights.
-4. Type: This parameters allows the separation of models in different folders. In the example there was one folder for models using linear membership functions, and another for models using gaussian membership functions. It allows the execution of models with the same configuration, but different rules, parameters, and consequent files.
+4. Type: This parameter allows the separation of models in different folders. In the example there was one folder for models using linear membership functions, and another for models using gaussian membership functions. It allows the execution of models with the same configuration, but different files for rules, parameters, and consequents.
 
 ## Contact
 
