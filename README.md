@@ -64,6 +64,11 @@ This configuration will return two results: one with the centroid and one with t
 3. Weights: Yes or No for rule weights.
 4. Type: This parameters allows the separation of models in different folders. In the example there was one folder for models using linear membership functions, and another for models using gaussian membership functions. It allows the execution of models with the same configuration, but different rules, parameters, and consequent files.
 
+### Contact
+
+Contact me at lucasmrizzo@gmail.com
+
+
 ### References
 <a id="1">[1]</a> 
 E. H. Mamdani, Application of fuzzy algorithms for control of simple
