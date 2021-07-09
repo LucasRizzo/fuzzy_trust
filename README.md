@@ -52,7 +52,7 @@ health:health.low => R1
 ```health.low``` needs to be defined in the parameters file. The logical AND operator ```&&``` can also be used here to add more than one premise.
 
 ##### A dataset file
-A csv file whose headers match the name of the variables. Each row will be an instance to be tested by the fuzzy reasoning model. Weights for features can be defined using the syntax ```Weight_<fuzzy_variable>```. The file ```portuguese.csv``` gives an example. Headers that don't match any fuzzy variable will be ignored. 
+A csv file whose headers match the name of the variables. Each row will be an instance to be tested by the fuzzy reasoning model. Weights for features can be defined using the syntax ```Weight_<fuzzy_variable>``` in the file's header. The file ```portuguese.csv``` gives an example. Headers that don't match any fuzzy variable will be ignored. 
 
 ##### A models file
 A models file is defined in order to facilitate the execution of models with different configurations. An example can be seen in the file ```models.txt```.
