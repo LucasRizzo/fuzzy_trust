@@ -32,16 +32,16 @@ An example can be seen in the ```parameters.txt``` file. This will be used to de
 ##### A consequent file
 An example can be seen in the ```trust_index.txt``` file. This follows the same syntax of the parameters file, but is used to define only the fuzzy membership functions of the fuzzy variables applied as the consequent of rules.
 ##### A rules file
-An example can be seen in the ```rules.txt``` file. This will be used to define the fuzzy rules and contradictions. An example is:
+Examples can be seen in the ```rules.txt``` file. This will be used to define the fuzzy rules and contradictions. An example of rule is:
 ```
 R1, age %is% age.high, risk %is% risk.high
 ```
-This examples defined a rule R1, in which the fuzzy variable ```age``` infers ```risk``` at level ```risk.high``` if ```age``` is level ```age.high```. ```age.high``` and ```risk.high``` need to be defined in the parameters file. A logical AND operator is implemented to add more than one fuzzy variable in the premises with the double and syntax: ```&&```.
+In R1, a fuzzy variable ```age``` infers ```risk``` at level ```risk.high``` if ```age``` is level ```age.high```. ```age.high``` and ```risk.high``` need to be defined in the parameters file. A logical ```AND``` operator is implemented to add more than one fuzzy variable in the premises with the double and syntax: ```&&```.
 Two rules can contradict each other with the following notation:
 ```
 R1 => R2
 ```
-This implies that if R1 is true then R2 is being contracted and needs to be reevaluated. A mutual contradiction can also be defined as:
+This implies that if R1 is true then R2 is being contradicted and needs to be reevaluated. A mutual contradiction can also be defined as:
 ```
 R1 <=> R2
 ```
